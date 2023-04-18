@@ -78,17 +78,17 @@ if( $ngstype eq "Archer" && $probes eq "" ) { print "Need probes for Archer...\n
 if( $inbam eq "" && $umitag ne "" ) { print "Need bamfile with umi tags...\n"; HelpMessage(1); }
 
 # CHANGE THIS TO LOCATION OF FLT3 INDEX (FLT3_dna_e14e15.fa, etc)
-my $refindex = "FLT3_dna_e14e15"; 
+my $refindex = "/app/FLT3_ITD_ext/FLT3_dna_e14e15"; #fix
 
 # THESE COMMANDS OR FILES NEED TO BE IN $PATH; OTHERWISE CHANGE TO THEIR FULL PATHNAME 
-my $samcmd = "samtools";
-my $bedcmd = "bamToFastq";
-my $bwacmd = "bwa";
+my $samcmd = "/app/samtools-1.16.1/samtools";
+my $bedcmd = "/app/bamtofastq-1.4.1/target/release/bamToFastq";
+my $bwacmd = "/app/bwa-0.7.17/bwa";
 my $clustercmd = "sumaclust";
 my $javacmd = "java"; # the java cmd needs to be in $PATH (e.g. "/apps/java/jdk1.8.0_191/bin/java";)
-my $fgbiojar = "fgbio.jar";
-my $trimcmd = "bbduk.sh";
-my $picardjar = "picard.jar";
+my $fgbiojar = "/app/fgbio/target/scala-2.13/fgbio-2.1.1-cbbef4a-SNAPSHOT.jar";
+my $trimcmd = "/app/bbmap-39.01/bbduk.sh";
+my $picardjar = "/app/picard/build/libs/picard-3.0.0-1-g62ec81c-SNAPSHOT-all.jar";
 
 my $minToCluster = 1;
 my $maxEditDist = 5;  
